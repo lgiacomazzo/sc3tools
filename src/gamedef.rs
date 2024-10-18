@@ -18,8 +18,13 @@ struct ResourceDir;
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub enum Game {
     SteinsGateHD,
-    SteinsGate0,
+    SteinsGateElite,
+    ChaosHeadLoveChuChu,
     RoboticsNotes,
+    SteinsGatePhenogram,
+    ChaosChild,
+    SteinsGate0,
+    ChaosChildLoveChuChu,
     RoboticsNotesDash,
 }
 
@@ -34,12 +39,20 @@ lazy_static! {
             vec!['\'', '-', '[', ']', '(', ')']
         ),
         GameDef::new(
-            Game::SteinsGate0,
-            "Steins;Gate 0",
-            "sg0",
-            &["sg0", "steinsgate0"],
+            Game::SteinsGateElite,
+            "Steins;Gate Elite",
+            "sge",
+            &["sge", "steinsgateelite"],
             Some('\u{E12F}'..='\u{E2AF}'),
-            vec!['\'']
+            vec!['\'', '-', '[', ']', '(', ')']
+        ),
+        GameDef::new(
+            Game::ChaosHeadLoveChuChu,
+            "Chaos;Head LCC",
+            "chlcc",
+            &["chlcc", "chaosheadlcc"],
+            None,
+            vec!['\'','-']
         ),
         GameDef::new(
             Game::RoboticsNotes,
@@ -48,6 +61,38 @@ lazy_static! {
             &["rn", "roboticsnotes"],
             None,
             vec!['\'', '-', '[', ']', '(', ')']
+        ),
+        GameDef::new(
+            Game::SteinsGatePhenogram,
+            "Steins;Gate: Linear Bounded Phenogram",
+            "sglbp",
+            &["sglbp", "steinsgatelbp"],
+            None,
+            vec!['\'', '-', '[', ']', '(', ')']
+        ),
+        GameDef::new(
+            Game::ChaosChild,
+            "Chaos;Child",
+            "cc",
+            &["cc", "chaoschild"],
+            Some('\u{E12F}'..='\u{E2AF}'),
+            vec!['\'']
+        ),
+        GameDef::new(
+            Game::SteinsGate0,
+            "Steins;Gate 0",
+            "sg0",
+            &["sg0", "steinsgate0"],
+            Some('\u{E12F}'..='\u{E2AF}'),
+            vec!['\'', '-', '[', ']', '(', ')']
+        ),
+        GameDef::new(
+            Game::ChaosChildLoveChuChu,
+            "Chaos;Child LCC",
+            "cclcc",
+            &["cclcc", "chaoschildlcc"],
+            Some('\u{E12F}'..='\u{E2AF}'),
+            vec!['\'']
         ),
         GameDef::new(
             Game::RoboticsNotesDash,
